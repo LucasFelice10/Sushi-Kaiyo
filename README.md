@@ -1,29 +1,22 @@
-# Welcome to your Lovable project
+# Kaiyō · Menú de sushi
 
-This project was built with [Lovable](https://lovable.dev).
+Menú digital visual de sushi, sashimi, postres y bebidas.
 
-## Build with Lovable
+**Sitio publicado:** https://lucasfelice10.github.io/Sushi-Kaiyo/
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Hecho con TanStack Start (modo SPA), React, TypeScript y Tailwind CSS.
+El contenido del menú se edita en `src/config/restaurantConfig.ts`.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Desarrollo
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun run dev
 ```
 
-## Built with
+## Despliegue
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+Cada push a `main` ejecuta `.github/workflows/deploy.yml`, que compila el sitio
+estático y lo publica en GitHub Pages (en Settings → Pages la fuente debe ser
+**GitHub Actions**). El `404.html` es copia del `index.html` para que cualquier
+ruta cargue la SPA.
